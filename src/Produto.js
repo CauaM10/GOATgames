@@ -16,7 +16,7 @@ const css = StyleSheet.create({
     caixa: {
         width: "40%",
         height: 300,
-        backgroundColor: "lightgray",
+        backgroundColor: "white",
         borderColor: "#1274BB",
         margin: 19,
         borderRadius: 9,

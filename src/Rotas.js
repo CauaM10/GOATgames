@@ -1,19 +1,39 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import InfoProduto from './InfoProduto';
+import Bateria from './Bateria'
+import { useContext } from 'react';
+import { UserContext } from './Context/UserContext';
+import Carrinho from './Carrinho';
+import Itens from './Itens'
+import Perfil from './Perfil'
 
-import Itens from "./Itens";
-import Perfil from "./Perfil";
 
-const Tab = createBottomTabNavigator();
 
-export default function Rotas()
-{
-    return(
-        <NavigationContainer>
-            <Tab.Navigator>
-                <Tab.Screen name="Início" component={Itens} />
-                <Tab.Screen name="Perfil" component={Perfil} />
-            </Tab.Navigator>
+const Drawer = createDrawerNavigator();
+
+
+export default function Rotas() {
+
+/*   const {logado} = useContext( UserContext );
+
+    if( logado == false ){
+        return( <Login/>)
+    }
+*/
+
+
+  return (
+      <NavigationContainer >
+        <Drawer.Navigator>
+          <Drawer.Screen name="Carrinho" component={Carrinho} />
+          <Drawer.Screen name="InfoProduto" component={InfoProduto} />
+          <Drawer.Screen name="B" component={Bateria} /> 
+          <Drawer.Screen name="Jogos" component={Itens} />
+          <Drawer.Screen name="Perfil" component={Perfil} />
+        </Drawer.Navigator>
       </NavigationContainer>
-    )
-} 
+     
+  );
+}
