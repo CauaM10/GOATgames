@@ -26,7 +26,7 @@ export default function Rotas() {
 
   return (
       <NavigationContainer >
-        <Drawer.Navigator>
+        <Drawer.Navigator screenOptions={{tabBarActiveTintColor:"red" , headerShown: false, tabBarStyle: {backgroundColor:"red"}}}>
           <Drawer.Screen name="Carrinho" component={Carrinho} />
           <Drawer.Screen name="InfoProduto" component={InfoProduto} />
           <Drawer.Screen name="B" component={Bateria} /> 

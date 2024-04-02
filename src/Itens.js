@@ -2,6 +2,7 @@ import { View, FlatList, StyleSheet, Text} from "react-native";
 import Produto from "./Produto";
 import { useContext } from "react";
 import { UserContext } from "./Context/UserContext";
+import InfoProduto from "./InfoProduto";
 
 
 const dados = [
@@ -79,12 +80,14 @@ export default function Itens( {navigation} )
             nome={item.nome}
             img={item.img}
             />
+            
             } 
             keyExtractor={item => item.id}
             contentContainerStyle={css.container}
             horizontal={false}
             numColumns={2}
             />
+            
         </View>
     )
 }
