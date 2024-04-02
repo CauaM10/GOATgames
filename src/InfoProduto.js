@@ -1,10 +1,12 @@
 import { NavigationContainer } from "@react-navigation/native"
-import { View, Image, Text,StyleSheet } from "react-native"
+import { View, Image, Text,StyleSheet, Button } from "react-native"
+import { TouchableOpacity } from "react-native-gesture-handler"
 
-export default function InfoProduto()
+export default function InfoProduto({img, preco, parcelado, nome})
 {
     return(
         <View style={{backgroundColor: "lightgray", flex: 1}}>
+            
             <View style={css.list}>
               <View style = {css.fotojogo}>        
                 <Image
@@ -17,6 +19,10 @@ export default function InfoProduto()
                     <Text style={css.codigo}>Código:<Text style={css.numerocd}>1234-456-789</Text></Text>
                     <Text style={css.marca}>Marca:<Text style={css.marcanome}>Geomatrix</Text></Text>
                 </View>
+                <View style={css.buttoncenter}>
+                    <TouchableOpacity style={css.ButtonComprar}><Text style={css.textcomprar}>COMPRAR</Text></TouchableOpacity>
+                </View>
+                
             </View>
         </View>
         
@@ -31,7 +37,9 @@ export default function InfoProduto()
         height: 559,
         marginTop: 40,
         backgroundColor: "white",
-        borderRadius: 5,
+        borderRadius: 7,
+        borderWidth: 1,
+        borderColor: "#1274BB"
         
     },
     tinyLogo:{
@@ -42,7 +50,8 @@ export default function InfoProduto()
     },
     fotojogo:
     {
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: "blue"
     },
     nome: 
     {
@@ -70,7 +79,26 @@ export default function InfoProduto()
     marcanome:
     {
         color: "blue"
-    }
+    },
+    ButtonComprar:
+    {
+        width: "50%",
+        height: 50,
+        backgroundColor: "#1274BB",
+        alignItems: 'center',
+        justifyContent: "center",
+        borderRadius: 4,
+        marginLeft:77,
+        marginTop: 140
+    },
+    textcomprar:
+    {
+        color: "white",
+        fontSize: 16,
+        fontWeight: "bold",
+        
+    },
+
     
 
  })
