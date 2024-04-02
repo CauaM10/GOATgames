@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native"
-import { View, Image, Text,StyleSheet, Button } from "react-native"
-import { TouchableOpacity } from "react-native-gesture-handler"
+import { View, Image, Text,StyleSheet, Button, TouchableOpacity } from "react-native"
+
+
 
 export default function InfoProduto({img, preco, parcelado, nome})
 {
@@ -34,24 +35,22 @@ export default function InfoProduto({img, preco, parcelado, nome})
     list:{
         width:"80%",
         margin: 33,
-        height: 559,
-        marginTop: 40,
+        height: 650,
+        marginTop: 80,
         backgroundColor: "white",
         borderRadius: 7,
         borderWidth: 1,
         borderColor: "#1274BB"
-        
     },
     tinyLogo:{
-        width: 153,
-        height: 217,
-        marginTop: 25,
+        width: 210,
+        height: 300,
+        marginTop: 30,
         borderRadius: 5
     },
     fotojogo:
     {
         alignItems: 'center',
-        backgroundColor: "blue"
     },
     nome: 
     {

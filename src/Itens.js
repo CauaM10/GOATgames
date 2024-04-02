@@ -2,7 +2,7 @@ import { View, FlatList, StyleSheet, Text} from "react-native";
 import Produto from "./Produto";
 import { useContext } from "react";
 import { UserContext } from "./Context/UserContext";
-import InfoProduto from "./InfoProduto";
+
 
 
 const dados = [

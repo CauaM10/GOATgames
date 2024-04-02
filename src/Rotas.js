@@ -1,6 +1,5 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 import InfoProduto from './InfoProduto';
 import Bateria from './Bateria'
 import { useContext } from 'react';
@@ -8,10 +7,11 @@ import { UserContext } from './Context/UserContext';
 import Carrinho from './Carrinho';
 import Itens from './Itens'
 import Perfil from './Perfil'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
+const Tab = createBottomTabNavigator();
 
-const Drawer = createDrawerNavigator();
 
 
 export default function Rotas() {
@@ -26,13 +26,13 @@ export default function Rotas() {
 
   return (
       <NavigationContainer >
-        <Drawer.Navigator screenOptions={{tabBarActiveTintColor:"red" , headerShown: false, tabBarStyle: {backgroundColor:"red"}}}>
-          <Drawer.Screen name="Carrinho" component={Carrinho} />
-          <Drawer.Screen name="InfoProduto" component={InfoProduto} />
-          <Drawer.Screen name="B" component={Bateria} /> 
-          <Drawer.Screen name="Jogos" component={Itens} />
-          <Drawer.Screen name="Perfil" component={Perfil} />
-        </Drawer.Navigator>
+        <Tab.Navigator screenOptions={{tabBarActiveTintColor:"black" , headerShown: false, tabBarStyle: {backgroundColor:"#6FA6FF"}}}>
+          <Tab.Screen name="Carrinho" component={Carrinho} />
+          <Tab.Screen name="InfoProduto" component={InfoProduto} />
+          <Tab.Screen name="B" component={Bateria} /> 
+          <Tab.Screen name="Jogos" component={Itens} />
+          <Tab.Screen name="Perfil" component={Perfil} />
+        </Tab.Navigator>
       </NavigationContainer>
      
   );
