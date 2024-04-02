@@ -93,7 +93,7 @@ const css = StyleSheet.create({
     container: {
         width: "100%",
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
     },
     usuario: {
         fontWeight: "500",
@@ -101,6 +101,7 @@ const css = StyleSheet.create({
         marginTop: 25,
         marginBottom: 20,
         fontSize: 18,
+        color: "#1274BB"
     }
 })
 
