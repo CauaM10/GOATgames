@@ -1,4 +1,4 @@
-import { View, FlatList, StyleSheet, Text} from "react-native";
+import { View, FlatList, StyleSheet, Text, Image} from "react-native";
 import Produto from "./Produto";
 import { useContext } from "react";
 import { UserContext } from "./Context/UserContext";
@@ -69,6 +69,13 @@ export default function Itens( {navigation} )
     const {usuario} = useContext( UserContext );
 
     return(
+        <>
+        <View style={css.logo}>
+        <Image
+        style={css.LogoGoat}
+        source={require( "../assets/LogoGoat.png")}
+        /> 
+        </View>
         <View style={css.container}>
             <Text style={css.usuario}>Bem Vindo, {usuario}!</Text>
             <FlatList 
@@ -89,6 +96,8 @@ export default function Itens( {navigation} )
             />
             
         </View>
+
+        </>
     )
 }
 
@@ -105,6 +114,23 @@ const css = StyleSheet.create({
         marginBottom: 20,
         fontSize: 18,
         color: "#1274BB"
+    },
+    logo: {
+
+        height: 100,
+        backgroundColor: "white",
+        alignItems: 'center',
+        justifyContent: "center"
+        
+        
+    }, LogoGoat:{
+        
+        height: 60,
+        width: 300,
+        alignItems: 'center',
+        justifyContent: "center"
+        
+
     }
 })
 

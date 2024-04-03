@@ -3,6 +3,7 @@ import { View,Image, Text,StyleSheet } from "react-native"
 export default function Bateria()
 {
     return(
+        
         <View>
             
                 <Image

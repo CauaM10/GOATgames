@@ -36,7 +36,7 @@ export default function Carrinho()
     logo2:{
         height: "100%",
         width: "100%",
-        backgroundColor: "lightgray"
+        backgroundColor: ""
     }, LogoGoat:{
         
         height: 60,
