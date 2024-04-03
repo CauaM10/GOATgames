@@ -62,11 +62,12 @@ const css = StyleSheet.create({
     Megacontainer: {
 
         width: "100%",
-        height: 800,
+        height: 700,
         backgroundColor: "#F9F9F9",
         display: 'flex',
         justifyContent: 'center',
-        alignItems: "center"
+        alignItems: "center",
+        
 
     },
     container: {
@@ -75,7 +76,7 @@ const css = StyleSheet.create({
         justifyContent: 'center',
         width: "100%",
         height: "40%",
-        marginTop: 5
+     
 
 
     },
@@ -94,8 +95,8 @@ const css = StyleSheet.create({
 
     image: {
 
-        width: 260,
-        height: 230,
+        width: 230,
+        height: 200,
         resizeMode: "stretch",
         marginBottom: 20,
 
@@ -169,7 +170,7 @@ const css = StyleSheet.create({
         width: "100%",
         height: 70,
         position: 'absolute',
-        bottom: 0,
+        bottom: -30,
         backgroundColor: 'blue',
         borderTopWidth: 3,
         borderTopColor: '#E1DBDB',

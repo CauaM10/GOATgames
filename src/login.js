@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { TextInput, View, StyleSheet, TouchableOpacity, Text, Linking, Image } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { UserContext } from './Context/userContext';
+import { UserContext } from './Context/UserContext';
 
 
 export default function Login(setLogado ) {
@@ -53,7 +53,7 @@ export default function Login(setLogado ) {
                 <View style={css.linha2} />
             </View>
             <View style={css.footer} >
-                <Text style={css.textfooter}>Não tem uma conta? <Text style={css.textfooterazul}  
+                <Text style={css.textfooter}>Não tem uma conta? <Text style={css.textfooterazul} 
                     >Cadastre-se</Text></Text>
             </View>
 
@@ -73,7 +73,7 @@ const css = StyleSheet.create({
     Megacontainer: {
 
         width: "100%",
-        height: 800,
+        height: 680,
         backgroundColor: "#F9F9F9",
         display: 'flex',
         justifyContent: 'center',
@@ -96,8 +96,8 @@ const css = StyleSheet.create({
     },
     image: {
 
-        width: 260,
-        height: 230,
+        width: 230,
+        height: 200,
         resizeMode: "stretch",
         marginBottom: 20,
     },
@@ -164,7 +164,7 @@ const css = StyleSheet.create({
         width: "100%",
         height: 70,
         position: 'absolute',
-        bottom: "0%",
+        bottom: -30,
 
         backgroundColor: 'blue',
         borderTopWidth: 3,
@@ -185,4 +185,8 @@ const css = StyleSheet.create({
 
 
 });
+ 
+ 
+
+
 
