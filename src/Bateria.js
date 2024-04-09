@@ -5,9 +5,7 @@ export default function Bateria()
     return(
         
         <View>
-            
                 <Image
-        
                 style={css.bateria}
                 source={require( "../assets/bateria.png")}
       /> 
@@ -21,7 +19,7 @@ export default function Bateria()
 
     bateria:{
         marginLeft: 130,
-        marginTop:200
+        marginTop: 300
 
     }, textbateria:{
         width:" 70%",
