@@ -41,7 +41,6 @@ export default function Rotas() {
             ),
           }} name="Carrinho" component={Carrinho} />
           <Tab.Screen name="InfoProduto" component={InfoProduto} />
-          <Tab.Screen name="B" component={Bateria} /> 
           <Tab.Screen options={{
             tabBarLabel: '',
             tabBarIcon: ({color, size}) => (
