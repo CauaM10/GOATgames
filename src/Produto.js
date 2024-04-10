@@ -1,6 +1,10 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { useContext } from "react";
+import { Image, StyleSheet, Text, View, Button } from "react-native";
+import { UserContext } from "./Context/UserContext";
 
 export default function Produto({img, preco, parcelado, nome}) {
+
+    const {setDetalhe} = useContext( UserContext );
     return(
         <View style={css.caixa}>
             <Image style={css.img} source={img}/>
@@ -8,6 +12,7 @@ export default function Produto({img, preco, parcelado, nome}) {
             <Text style={css.preco}>{preco}</Text>
             <Text style={css.parcelado}>{parcelado}</Text>
             <Text style={css.parcelado}>{nome}</Text>
+            <Button style={css.btn} title="Detalhes" onPress={() => setDetalhe( true ) }/>
         </View>
     )
 }
@@ -15,7 +20,7 @@ export default function Produto({img, preco, parcelado, nome}) {
 const css = StyleSheet.create({
     caixa: {
         width: "40%",
-        height: 300,
+        height: "90%",
         backgroundColor: "white",
         borderColor: "#1274BB",
         margin: 19,
@@ -26,7 +31,7 @@ const css = StyleSheet.create({
     preco: {
         fontWeight: "bold",
         fontStyle: "italic",
-        marginTop: 17,
+        marginTop: 15,
         marginLeft: 5,
     },
     parcelado: {
@@ -51,6 +56,6 @@ const css = StyleSheet.create({
         height: 1,
         width:"100%",
         marginTop: 30
-    }
+    },
 })
     
