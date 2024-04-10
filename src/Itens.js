@@ -168,11 +168,13 @@ const css = StyleSheet.create({
         marginLeft: 130,
         marginTop: 300
 
-    }, textbateria: {
+    }, 
+    textbateria: {
         width: " 70%",
         marginTop: 5,
         marginLeft: 110
-    }, textbateria2:
+    }, 
+    textbateria2:
     {
         marginLeft: 72
 
