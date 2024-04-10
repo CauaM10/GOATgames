@@ -1,6 +1,10 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { useContext } from "react";
+import { Image, StyleSheet, Text, View, Button } from "react-native";
+import { UserContext } from "./Context/UserContext";
 
 export default function Produto({img, preco, parcelado, nome}) {
+
+    const {setDetalhe} = useContext( UserContext );
     return(
         <View style={css.caixa}>
             <Image style={css.img} source={img}/>
@@ -8,6 +12,7 @@ export default function Produto({img, preco, parcelado, nome}) {
             <Text style={css.preco}>{preco}</Text>
             <Text style={css.parcelado}>{parcelado}</Text>
             <Text style={css.parcelado}>{nome}</Text>
+            <Button title="Detalhes" onPress={() => setDetalhe( true ) }/>
         </View>
     )
 }

@@ -1,10 +1,9 @@
-import { View, FlatList, StyleSheet, Text, Image, Switch } from "react-native";
+import { View, FlatList, StyleSheet, Text, Image, Button } from "react-native";
 import Produto from "./Produto";
 import { useContext } from "react";
 import React, { useEffect, useState } from "react";
 import { UserContext } from "./Context/UserContext";
 import { useBatteryLevel } from "expo-battery";
-
 
 const dados = [
     {
@@ -66,23 +65,28 @@ const dados = [
 ]
 
 export default function Itens({ navigation }) {
-    const [ativado, setAtivado] = useState(false);
-    const { usuario } = useContext(UserContext);
+
+    const { usuario, detalhe, setDetalhe } = useContext(UserContext);
     const [bateria, setBateria] = useState();
 
     const batteryLevel = useBatteryLevel();
 
-    function CliqueSwitch() {
-        setAtivado(!ativado);
-        if (!ativado) {
-            setCor("black");
-        } else {
-            setCor("white")
-        }
-    }
+    
+
+   
     useEffect(() => {
         setBateria((batteryLevel * 100).toFixed(0));
     }, [batteryLevel]);
+
+    if (detalhe) {
+        return (
+            <>
+                <Text>Detalhes</Text>
+                <Button title="fechar" onPress={() => setDetalhe(false)} />
+            </>
+
+        )
+    }
 
     return (
 
@@ -160,12 +164,12 @@ const css = StyleSheet.create({
         alignItems: 'center',
         justifyContent: "center"
     },
-    bateria:{
+    bateria: {
         marginLeft: 130,
         marginTop: 300
 
-    }, textbateria:{
-        width:" 70%",
+    }, textbateria: {
+        width: " 70%",
         marginTop: 5,
         marginLeft: 110
     }, textbateria2:
