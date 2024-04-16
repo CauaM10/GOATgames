@@ -24,7 +24,6 @@ const {logado} = useContext( UserContext );
   if( logado == false ){
        return( <Login />)
   }
-
   return (
       <NavigationContainer >
         <Tab.Navigator screenOptions={{tabBarActiveTintColor:"black" , headerShown: false, tabBarStyle: {backgroundColor:"#6FA6FF"}}}>
