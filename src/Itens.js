@@ -177,10 +177,7 @@ const css = StyleSheet.create({
         marginTop: 5,
         marginLeft: 110
     }, 
-    textbateria2:
-    {
+    textbateria2:{
         marginLeft: 72
-
     }
 })
-
