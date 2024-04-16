@@ -4,14 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 
-const INITIAL_PRODUCTS = []
-
-
-
-
-
-
-
+const INITIAL_PRODUCTS = [];
 
 export default function Carrinho() {
   const [products, setProducts] = useState(INITIAL_PRODUCTS); 
@@ -33,7 +26,7 @@ export default function Carrinho() {
     };
 
     getProductsFromStorage();
-  }, []);
+  }, [products]);
 
 
   const handleFreteCalculation = () => {

@@ -1,10 +1,13 @@
 import 'react-native-gesture-handler';
+import {useContext} from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import Carrinho from './Carrinho';
 import Itens from './Itens'
 import Perfil from './Perfil'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import { UserContext } from './Context/UserContext';
+import Login from "./login";
 
 
 const Tab = createBottomTabNavigator();
