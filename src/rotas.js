@@ -48,6 +48,5 @@ const {logado} = useContext( UserContext );
           }} name="Perfil" component={Perfil} />
         </Tab.Navigator>
       </NavigationContainer>
-     
   );
 }
