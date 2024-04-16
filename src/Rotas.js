@@ -1,9 +1,5 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
-import InfoProduto from './InfoProduto';
-import Bateria from './Bateria'
-import { useContext } from 'react';
-import { UserContext } from './Context/UserContext';
 import Carrinho from './Carrinho';
 import Itens from './Itens'
 import Perfil from './Perfil'
@@ -40,7 +36,7 @@ export default function Rotas() {
               <MaterialCommunityIcons name= "cart" color= "black" size={size}></MaterialCommunityIcons>
             ),
           }} name="Carrinho" component={Carrinho} />
-          <Tab.Screen name="InfoProduto" component={InfoProduto} />
+          
           <Tab.Screen options={{
             tabBarLabel: '',
             tabBarIcon: ({color, size}) => (
