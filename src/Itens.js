@@ -78,6 +78,9 @@ export default function Itens({ navigation }) {
         setBateria((batteryLevel * 100).toFixed(0));
     }, [batteryLevel]);
 
+
+
+
     if (detalhe) {
         return (
             <>
