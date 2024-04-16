@@ -2,12 +2,14 @@ import { createContext, useEffect, useState } from "react";
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 
-export const UserContext = createContext(); 
+export const UserContext = createContext(0); 
 
 
-function UserProvider  ({children}) 
+function UserProvider({children}) 
 {
-    const [logado, setLogado] = useState(false)
+    const [ logado, setLogado] = useState(false);
+    const [ usuario, setUsuario] = useState(null);
+    const [ detalhe, setDetalhe ] = useState(false);
 
     async function Login( email, senha)
     {
@@ -17,8 +19,6 @@ function UserProvider  ({children})
             setLogado( true );
         }
     }
-
-    const[ usuario, setUsuario] = useState(null);
 
     async function infoUsuario()
     {
@@ -30,7 +30,7 @@ function UserProvider  ({children})
         infoUsuario()
     },[])
     return(
-        <UserContext.Provider value={{ usuario: "Caua", logado: logado}}>
+        <UserContext.Provider value={{ logado: logado, setLogado, Login, usuario: usuario, setUsuario, detalhe: detalhe, setDetalhe }}>
             {children}
         </UserContext.Provider>
     )
