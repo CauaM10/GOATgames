@@ -7,7 +7,7 @@ import Perfil from './Perfil'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { UserContext } from './Context/UserContext';
-import Login from "./login";
+import Login from './Login';
 
 
 const Tab = createBottomTabNavigator();

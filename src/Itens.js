@@ -111,6 +111,16 @@ export default function Itens({ navigation }) {
         <>
             {bateria < 20 ?
                 <>
+                <View>
+                    <Image
+                        style={css.bateria}
+                        source={require("../assets/bateria.png")} />
+                    <Text style={css.textbateria}>Sua bateria está acabando,
+                    </Text><Text style={css.textbateria2}>não será possível continuar sua compra!</Text>
+                </View>
+                </>
+                :
+                <>
                 
                     <View style={css.logo}>
                         <Image
@@ -143,16 +153,6 @@ export default function Itens({ navigation }) {
 
                     </View>
 
-                </>
-                :
-                <>
-                <View>
-                    <Image
-                        style={css.bateria}
-                        source={require("../assets/bateria.png")} />
-                    <Text style={css.textbateria}>Sua bateria está acabando,
-                    </Text><Text style={css.textbateria2}>não será possível continuar sua compra!</Text>
-                </View>
                 </>
             }
         </>

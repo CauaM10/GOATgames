@@ -11,23 +11,25 @@ export default function Carrinho() {
   const [frete, setFrete] = useState(null); 
   const [ total, setTotal ] = useState(0);
 
+  useEffect( () => {
+    getProductsFromStorage();
+  }, [] );
 
   useEffect(() => {
-    const getProductsFromStorage = async () => {
-      try {
-        const storedProducts = await AsyncStorage.getItem('Carrinho');
-        if (storedProducts !== null) {
-          const parsedProducts = JSON.parse(storedProducts);
-          setProducts(parsedProducts);
-        }
-      } catch (error) {
-        console.error('Error fetching products from AsyncStorage:', error);
-      }
-    };
-
     getProductsFromStorage();
   }, [products]);
 
+  const getProductsFromStorage = async () => {
+    try {
+      const storedProducts = await AsyncStorage.getItem('Carrinho');
+      if (storedProducts !== null) {
+        const parsedProducts = JSON.parse(storedProducts);
+        setProducts(parsedProducts);
+      }
+    } catch (error) {
+      console.error('Error fetching products from AsyncStorage:', error);
+    }
+  };
 
   const handleFreteCalculation = () => {
 
