@@ -79,6 +79,13 @@ export default function Itens({ navigation }) {
     }, [batteryLevel]);
 
 
+    if(bateria < 20) {
+        return (
+            <>
+            
+            </>
+        )
+    }
 
 
     if (detalhe) {
@@ -125,6 +132,7 @@ export default function Itens({ navigation }) {
 
                 </>
                 :
+                <>
                 <View>
                     <Image
                         style={css.bateria}
@@ -132,6 +140,7 @@ export default function Itens({ navigation }) {
                     <Text style={css.textbateria}>Sua bateria está acabando,
                     </Text><Text style={css.textbateria2}>não será possível continuar sua compra!</Text>
                 </View>
+                </>
             }
         </>
     )
