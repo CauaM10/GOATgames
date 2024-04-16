@@ -66,7 +66,7 @@ export default function Carrinho() {
 
     calculateTotalPrice();
 
-  }, [products]); 
+  }, [products]);
 
     const calculateTotalPrice = () => {
       if (products.length === 0) {
