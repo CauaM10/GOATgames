@@ -94,8 +94,9 @@ export default function Itens({ navigation }) {
     return (
 
         <>
-            {bateria > 20 ?
+            {bateria < 20 ?
                 <>
+                
                     <View style={css.logo}>
                         <Image
                             style={css.LogoGoat}
@@ -132,6 +133,9 @@ export default function Itens({ navigation }) {
                     <Text style={css.textbateria}>Sua bateria está acabando,
                     </Text><Text style={css.textbateria2}>não será possível continuar sua compra!</Text>
                 </View>
+
+                            
+
             }
         </>
     )
