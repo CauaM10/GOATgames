@@ -22,7 +22,7 @@ export default function Rotas() {
 const {logado} = useContext( UserContext );
 
   if( logado == false ){
-       return( <Login/>)
+       return( <Login />)
   }
 
   return (
