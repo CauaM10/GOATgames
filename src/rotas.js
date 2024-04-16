@@ -11,11 +11,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import Login from './login'
 
-
-
 const Tab = createBottomTabNavigator();
-
-
 
 export default function Rotas() {
 
