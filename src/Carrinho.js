@@ -42,14 +42,8 @@ export default function Carrinho() {
       const currentCart = await AsyncStorage.getItem('Carrinho');
       if (currentCart !== null) {
         const parsedProducts = JSON.parse(currentCart);
-
-
         const updatedProducts = parsedProducts.filter((product) => product.id !== productId);
-
-
         await AsyncStorage.setItem('Carrinho', JSON.stringify(updatedProducts));
-
-
         setProducts(updatedProducts);
       }
     } catch (error) {
